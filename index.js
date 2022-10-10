@@ -50,4 +50,4 @@ app.get("/insta", async (req, res) => {
 });
 
 const Port = process.env.PORT
-app.listen(Port || 1234)
+app.listen(Port)
