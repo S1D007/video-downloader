@@ -2,7 +2,7 @@ const cors = require("cors");
 const express = require('express')
 const app = express()
 const twitterGetUrl = require("twitter-url-direct")
-const helmet = require("helmet")
+const hmt = require("helmet")
 const getFBInfo = require("fb-downloader");
 const instagramGetUrl = require("instagram-url-direct");
 const axios = require("axios")
@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(hmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.get('/', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     const { url } = req.query
